@@ -1,0 +1,32 @@
+.hero {
+  padding-top: 146px;
+  height: 1020px;
+}
+
+.hero__title {
+  position: relative;
+  margin: 0;
+  font-size: 132px;
+  font-weight: 900;
+  line-height: 150px;
+  text-transform: uppercase;
+}
+
+.hero__title::after {
+  content: "";
+  position: absolute;
+  top: 61px;
+  right: 0;
+  display: inline-block;
+  width: 675px;
+  height: 762px;
+  background-image: url('../img/man.png');
+  background-size: cover;
+}
+
+.hero__descr {
+  padding-left: 100px;
+  margin: 0;
+  font-size: 28px;
+  line-height: 50px;
+}

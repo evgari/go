@@ -1,0 +1,70 @@
+.about__title {
+  margin-bottom: 50px;
+}
+
+.about__inner {
+  display: flex;
+}
+
+.about__left {
+  margin-right: 80px;
+  min-width: 600px;
+}
+
+.about__descr {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.about__descr:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.about__blockquote {
+  position: relative;
+  font-size: 44px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.about__blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 100px;
+  color: #6c0287;
+}
+
+.about__blockquote::after {
+  content: "\201D";
+  position: absolute;
+  bottom: -20px;
+  right: 55px;
+  font-size: 100px;
+  color: #6c0287;
+}
+
+.about__blockquote b {
+  display: block;
+  font-weight: 900;
+}
+
+.creator {
+  text-align: right;
+}
+
+.creator__imgage {
+  display: inline-block;
+  margin-right: 30px;  
+  vertical-align: -5px;
+}
+
+.creator__cite {
+  display: inline-block;
+  max-width: 260px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: left;
+}
