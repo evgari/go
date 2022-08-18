@@ -18,19 +18,19 @@
       <nav class="nav">
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a class="nav__link" href="#">залы</a>
+            <a class="nav__link" href="#halls">залы</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">о нас</a>
+            <a class="nav__link" href="#about">о нас</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">бронь</a>
+            <a class="nav__link" href="#reserv">бронь</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">отзывы</a>
+            <a class="nav__link" href="#rewiews">отзывы</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">контакты</a>
+            <a class="nav__link" href="#contacts">контакты</a>
           </li>
         </ul>
       </nav>
@@ -110,7 +110,7 @@
 
     <section class="halls section-padding">
       <div class="container">
-        <h2 class="title halls__title">Наши залы</h2>
+        <h2 id="halls" class="title halls__title">Наши залы</h2>
         <ul class="halls__list list-reset">
           <li class="halls__item halls__item_bg_vibes">
             <p class="halls__name">80’s vibes</p> 
@@ -132,7 +132,7 @@
       <div class="container">
         <h2 class="title reservation__title">Забронировать зал просто</h2>
         <form class="reservation-form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-          <p class="reservation-form__title">Выбери зал</p>
+          <p id="reserv" class="reservation-form__title">Выбери зал</p>
           <fieldset class="reservation-form__group reservation-form__group_1">
             <input id="vibes" class="place-input" type="radio" name="hall" value="80'svibes">
             <label class="place-btn" for="vibes">80'svibes</label>
@@ -198,7 +198,7 @@
 
     <section class="about section-padding">
       <div class="container">
-        <h2 class="title about__title">О нас</h2>
+        <h2 id="about" class="title about__title">О нас</h2>
         <div class="about__inner">
           <div class="about__left">
             <img class="about__image" src="img/about.jpg" alt="Видеоигры и караоке">
@@ -225,7 +225,7 @@
 
     <section class="reviews section-padding">
       <div class="container">
-        <h2 class="title reviews__title">Отзывы посетителей</h2>
+        <h2 id="rewiews" class="title reviews__title">Отзывы посетителей</h2>
         <ul class="reviews__list list-reset">
           <li class="reviews__item">
             <figure class="reviews__image">
@@ -276,7 +276,7 @@
 
   <footer class="footer section-padding">
     <div class="container">
-      <h2 class="title footer__title">Контакты</h2>
+      <h2 id="contacts" class="title footer__title">Контакты</h2>
       <div class="footer__inner">
         <div class="footer__left">
           <ul class="footer__list list-reset">
@@ -335,7 +335,7 @@
         <span class="copyright">© Game Over, 2022</span>
         <span class="copyright">
           Design by Anastasia Ilina
-          ilina9825@gmail.com
+          <a class="copyright__link" href="mailto:ilina9825@gmail.com">ilina9825@gmail.com</a>
         </span>
       </div>
     </div>
