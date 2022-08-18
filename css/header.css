@@ -1,0 +1,36 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav__link {
+  font-size: 22px;
+  font-weight: 400px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.header__btn {
+  border: 3px solid #cd06ff;
+  border-radius: 10px;
+  padding: 12px 48px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}

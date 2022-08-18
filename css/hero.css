@@ -1,6 +1,7 @@
-.hero {
+.hero__container {
+  position: relative;
   padding-top: 146px;
-  height: 1020px;
+  height: 100vh;
 }
 
 .hero__title {
@@ -15,9 +16,10 @@
 .hero__title::after {
   content: "";
   position: absolute;
+  z-index: 10;
   top: 61px;
   right: 0;
-  display: inline-block;
+  display: block;
   width: 675px;
   height: 762px;
   background-image: url('../img/man.png');
@@ -27,6 +29,61 @@
 .hero__descr {
   padding-left: 100px;
   margin: 0;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 50px;
 }
+
+.benefits {
+  display: flex;
+  gap: 43px;
+  align-items: flex-end;
+}
+
+.benefits__item {
+  max-width: 200px;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.benefits__item-benefit {
+  margin: 0;
+  color: #cd06ff;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.benefits__item-benefit_count {
+  font-size: 100px;
+  line-height: 141px;
+}
+
+.benefits__item-benefit_text {
+  font-size: 75px;
+  line-height: 106px;
+}
+
+.hero__benefits {
+  margin-bottom: 150px;
+}
+
+.hero__btn {
+  border-radius: 10px;
+  padding: 25px 70px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #6c0287;
+  text-transform: uppercase;
+}
+
+.hero__down-btn {
+  position: absolute;
+  z-index: 50;
+  left: 50%;
+  bottom: 90px;
+  transform: translateX(-50%);
+}
+
+

@@ -1,6 +1,6 @@
 html {
-  position: relative;
   box-sizing: border-box;
+  position: relative;
 }
 
 *,
@@ -59,4 +59,21 @@ a {
   padding: 0 30px;
   margin: 0 auto;
 }
+
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.title {
+  margin: 0;
+  margin: 0 auto;
+  max-width: 980px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+
 

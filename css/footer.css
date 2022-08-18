@@ -1,5 +1,20 @@
+.footer {
+  padding-bottom: 15px;
+  background: linear-gradient(180deg, #1b1a1b 0%, #370a37 100%);
+}
+
 .footer__title {
   margin-bottom: 50px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 156px;
+}
+
+.footer__right {
+  min-width: 680px;
 }
 
 .footer__list {
@@ -45,4 +60,16 @@
 
 .social__item:not(:last-child) {
   margin-right: 28px;
+}
+
+.footer__copy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  max-width: 160px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
 }

@@ -1,8 +1,9 @@
 @import url('../css/normalize.css');
 @import url('../css/global.css');
-@import url('../css/overall.css');
 
+@import url('../css/header.css');
 @import url('../css/hero.css');
+@import url('../css/entertainment.css');
 @import url('../css/halls.css');
 @import url('../css/reservation.css');
 @import url('../css/about.css');
