@@ -1,9 +1,4 @@
 .header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
 }
