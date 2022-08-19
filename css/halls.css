@@ -3,7 +3,8 @@
 }
 
 .halls__name {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 70px;
   font-weight: 700;
   line-height: 80px;

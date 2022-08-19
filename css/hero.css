@@ -6,7 +6,6 @@
 
 .hero__title {
   position: relative;
-  margin: 0;
   font-size: 132px;
   font-weight: 900;
   line-height: 150px;
@@ -28,7 +27,6 @@
 
 .hero__descr {
   padding-left: 100px;
-  margin: 0;
   margin-bottom: 30px;
   font-size: 28px;
   line-height: 50px;
@@ -48,7 +46,6 @@
 }
 
 .benefits__item-benefit {
-  margin: 0;
   color: #cd06ff;
   font-weight: 900;
   text-transform: uppercase;
@@ -76,6 +73,22 @@
   color: #fff;
   background-color: #6c0287;
   text-transform: uppercase;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .hero__btn:hover {
+    background-color: #840aa3;
+  }
+}
+
+.hero__btn.focus-visible {
+  background-color: #840aa3;
+}
+
+.hero__btn:active {
+  background-color: #640aa3;
 }
 
 .hero__down-btn {
@@ -83,7 +96,41 @@
   z-index: 50;
   left: 50%;
   bottom: 90px;
+  color: #fff;
   transform: translateX(-50%);
 }
+
+.hero__down-btn circle {
+  fill: transparent;
+  transition: fill 0.3s ease-in-out;
+}
+
+.hero__down-btn rect {
+  transition: fill 0.3s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .hero__down-btn:hover circle {
+    fill: #fff;
+  }
+
+  .hero__down-btn:hover rect {
+    fill: #6c0287;
+  }
+}
+
+.hero__down-btn.focus-visible {
+  outline: 1px solid #cd06ff;
+}
+
+.hero__down-btn:active circle {
+  fill: #cd06ff;
+}
+
+.hero__down-btn:active rect {
+  fill: #fff;
+}
+
+
 
 

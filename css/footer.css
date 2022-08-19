@@ -1,5 +1,5 @@
 .footer {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   background: linear-gradient(180deg, #1b1a1b 0%, #370a37 100%);
 }
 
@@ -44,6 +44,7 @@
   padding-left: 50px;
   background-position: left;
   background-repeat: no-repeat;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer__link_icon_phone {
@@ -54,12 +55,50 @@
   background-image: url('../img/envelope.svg');
 }
 
-.social__item {
-  display: inline-block;
+@media (min-width: 1025px) {
+  .footer__link:hover {
+    color: #6c0287;
+  }
+}
+
+.footer__link.focus-visible {
+  outline: 2px solid #cd06ff;
+  border-radius: 10px;
+  outline-offset: 5px;
+}
+
+.footer__link:active {
+  color: #cd06ff;
+}
+
+.social {
+  display: flex;
 }
 
 .social__item:not(:last-child) {
   margin-right: 28px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .social__link:hover {
+    color: #eadeed;
+  }
+}
+
+.social__link.focus-visible {
+  color: #eadeed;
+  outline: 2px solid #cd06ff;
+}
+
+.social__link:active {
+  color: #cd06ff;
 }
 
 .footer__copy {
@@ -72,4 +111,24 @@
   font-size: 14px;
   line-height: 16px;
   color: #fff;
+}
+
+.copyright {
+  transition: color 0.3s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .copyright__link:hover {
+    color: #6c0287;
+  }
+}
+
+.copyright__link.focus-visible {
+  outline: 2px solid #cd06ff;
+  border-radius: 10px;
+  outline-offset: 5px;
+}
+
+.copyright__link:active {
+  color: #cd06ff;
 }

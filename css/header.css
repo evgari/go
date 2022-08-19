@@ -24,6 +24,23 @@
   font-weight: 400px;
   line-height: 50px;
   text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .nav__link:hover {
+    color: #6c0287;
+  }
+}
+
+.nav__link.focus-visible {
+  outline: 2px solid #cd06ff;
+  border-radius: 10px;
+  outline-offset: 5px;
+}
+
+.nav__link:active {
+  color: #cd06ff;
 }
 
 .header__btn {
@@ -33,4 +50,19 @@
   font-size: 22px;
   font-weight: 700;
   color: #fff;
+  outline: none;
+  transition: background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .header__btn:hover {
+    border-color: #6c0287;
+    background-color: #6c0287;
+  }
+}
+
+.header__btn.focus-visible {
+  border-color: #6c0287;
+  background-color: #6c0287;
 }

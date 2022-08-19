@@ -8,6 +8,8 @@
 
   <link type="image/svg+xml" rel="icon" href="img/icon.svg">
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/focus-visible.js" defer></script>
 </head>
 <body class="page">
   <header class="header">
@@ -128,70 +130,105 @@
       </div>
     </section>
 
-    <section class="reservation section-padding">
-      <div class="container">
+    <section class="reservation section-padding section-padding_big">
+      <div class="container reservation__container">
         <h2 class="title reservation__title">Забронировать зал просто</h2>
-        <form class="reservation-form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-          <p id="reserv" class="reservation-form__title">Выбери зал</p>
+        <form class="reservation-form" action="https://jsonplaceholder.typicode.com/posts" method="POST"> 
+          <p id="reserv" class="reservation-form__title">Выбери зал</p>         
           <fieldset class="reservation-form__group reservation-form__group_1">
-            <input id="vibes" class="place-input" type="radio" name="hall" value="80'svibes">
-            <label class="place-btn" for="vibes">80'svibes</label>
-            <input id="starwars" class="place-input" type="radio" name="hall" value="starwars">
-            <label class="place-btn" for="starwars">starwars</label>
-            <input id="west" class="place-input" type="radio" name="hall" value="wildwest">
-            <label class="place-btn" for="west">wildwest</label>
-            <input id="neon" class="place-input" type="radio" name="hall" value="neonstyle">
-            <label class="place-btn" for="neon">neonstyle</label>  
+            <input id="place-1" class="hall-input" type="radio" name="hall" value="vibes">
+            <label class="hall-btn" for="place-1">80’s vibes</label>
+            <input id="place-2" class="hall-input" type="radio" name="hall" value="star-wars">
+            <label class="hall-btn" for="place-2">Star wars</label>
+            <input id="place-3" class="hall-input" type="radio" name="hall" value="wild-west">
+            <label class="hall-btn" for="place-3">wild west</label>
+            <input id="place-4" class="hall-input" type="radio" name="hall" value="neon">
+            <label class="hall-btn" for="place-4">neon style</label>
           </fieldset>
-      
-          <p class="reservation-form__title">Собери набор развлечений</p>
-          <fieldset class="reservation-form__group reservation-form__group_2">
-            <fieldset class="reservation-form__subgroup">
-              <p class="reservation-form__subtitle">Приставка:</p>
-              <label><input class="group-input" type="radio" name="console" value="playstation">PlayStation</label>
-              <label><input class="group-input" type="radio" name="console" value="segamegadrive">SegaMegaDrive</label>
-              <label><input class="group-input" type="radio" name="console" value="x-boxones">X-box One S</label>
-              <label><input class="group-input" type="radio" name="console" value="dendy">Dendy</label>  
+
+          <fieldset class="reservation-form__inner">
+            <p class="reservation-form__title">Собери набор развлечений</p>
+            <fieldset class="reservation-form__group reservation-form__group_2">         
+              <fieldset class="reservation-form__subgroup">
+                <p class="reservation-form__subtitle">Приставка:</p>
+                <label class="console">
+                  <input class="console__input" type="radio" name="console" value="ps5">
+                  PlayStation 5
+                </label>
+                <label class="console">
+                  <input class="console__input" type="radio" name="console" value="sega">
+                  Sega Mega Drive
+                </label>
+                <label class="console">
+                  <input class="console__input" type="radio" name="console" value="x-box">
+                  X-box One S
+                </label>
+                <label class="console">
+                  <input class="console__input" type="radio" name="console" value="dendy">
+                  Dendy
+                </label> 
+              </fieldset>
+
+              <fieldset class="reservation-form__subgroup">
+                <p class="reservation-form__subtitle">Настольные игры</p>
+                <label class="game">
+                  <input class="game__checkbox" type="checkbox" name="game" value="jenga">
+                  Jenga
+                </label>
+                <label class="game">
+                  <input class="game__checkbox" type="checkbox" name="game" value="monopoly">
+                  Monopoly
+                </label>
+                <label class="game">
+                  <input class="game__checkbox" type="checkbox" name="game" value="manchkin">
+                  Манчкин
+                </label>
+                <label class="game">
+                  <input class="game__checkbox" type="checkbox" name="game" value="alias">
+                  Alias
+                </label>
+              </fieldset>
+
+              <fieldset class="reservation-form__subgroup">
+                <p class="reservation-form__subtitle">Дополнительно</p>
+                <label class="game">
+                  <input class="game__checkbox" type="checkbox" name="add" value="karaoke">
+                  Караоке
+                </label>
+                <label class="game">
+                  <input class="game__checkbox" type="checkbox" name="add" value="vr">
+                  VR
+                </label>
+              </fieldset>
             </fieldset>
-            <fieldset class="reservation-form__subgroup">
-              <p class="reservation-form__subtitle">Настольные игры</p>
-              <label><input class="group-input" type="checkbox" name="game" value="jenga">Jenga</label>
-              <label><input class="group-input" type="checkbox" name="game" value="monopoly">Monopoly</label>
-              <label><input class="group-input" type="checkbox" name="game" value="munchkin">Манчкин</label>
-              <label><input class="group-input" type="checkbox" name="game" value="alias">Alias</label>  
+    
+            <p class="reservation-form__title">Выбери дату и время</p>
+            <fieldset class="reservation-form__group reservation-form__group_3">
+              <fieldset class="reservation-form__date">
+                <input class="date-input" type="time" required>
+                <input class="date-input" type="date" required>
+              </fieldset>
+              <label class="personal">
+                Имя
+                <input class="personal-input" type="text" name="firs-name" required>
+              </label>
+              <label class="personal">
+                Телефон
+                <input class="personal-input" type="tel" name="phone" required>
+              </label>
+              <input class="personal-input" type="number" name="count" placeholder="Сколько человек" required>
+              <label class="personal">
+                Фамилия
+                <input class="personal-input" type="text" name="second-name" required>
+              </label>
+              <label class="personal">
+                E-mail
+                <input class="personal-input" type="email" name="email" required>
+              </label>
             </fieldset>
-            <fieldset class="reservation-form__subgroup">
-              <p class="reservation-form__subtitle">Дополнительно</p>
-              <label><input class="group-input" type="checkbox" name="other" value="karaoke">Караоке</label>
-              <label><input class="group-input" type="checkbox" name="other" value="vr">VR</label>  
-            </fieldset>
+
+            <button class="reservation-form__btn btn-reset">Забронировать</button>
           </fieldset>
-      
-          <p class="reservation-form__title">Выбери дату и время</p>
-          <fieldset class="reservation-form__group registration">
-            <div class="registration__wrapper registration__wrapper_date">
-              <input class="date-input" type="time" required>
-              <input class="date-input" type="date" required>
-            </div>
-            <label class="registration__wrapper">
-              Имя <input class="registration__input" type="text" name="firstname" required>
-            </label>
-            <label class="registration__wrapper">
-              Фамилия <input class="registration__input" type="text" name="secondname" required>
-            </label>
-            <div class="registration__wrapper registration__wrapper_count">
-              <input class="registration__input" type="number" name="amount" required>
-            </div>
-            <label class="registration__wrapper">
-              Номер телефона <input class="registration__input" type="tel" name="phone" required pattern="^\+?[7-8]-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" placeholder="+7-___-___-__-__">
-            </label>
-            <label class="registration__wrapper">
-              E-mail <input class="registration__input" type="email" name="email" required>
-            </label>  
-          </fieldset>
-          <div class="reservation-form__group reservation-form__group_2">
-            <button class="registration-btn btn-reset" type="submit">Забронировать</button>
-          </div>
         </form>
       </div>
     </section>
@@ -264,11 +301,56 @@
       <div class="container">
         <h2 class="title faq__title">Частые вопросы</h2>
         <ul class="faq__list list-reset">
-          <li class="faq__item">Можно ли забронировать комнату онлай?</li>
-          <li class="faq__item">Могут ли мне вернуть деньги за бронь?</li>
-          <li class="faq__item">Какая комната самая популярная?</li>
-          <li class="faq__item">Как получить VIP карту?</li>
-          <li class="faq__item">Какая комната самая популярная?</li>
+          <li class="faq__item accordion">
+            <button class="accordion__control btn-reset">
+              Можно ли забронировать комнату онлай?
+              <svg width="46" height="46" viewbox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-purple" cx="23" cy="23" r="22.5" />
+                <path class="path-purple" d="M22.8305 14H23.5085V34H22.8305V14Z" />
+                <path class="path-purple" d="M13 24.1695V23.4915H33V24.1695H13Z" />
+              </svg>
+            </button>  
+          </li>
+          <li class="faq__item accordion">
+            <button class="accordion__control btn-reset accordion__control_bg_purple">
+              Могут ли мне вернуть деньги за бронь?
+              <svg width="46" height="46" viewbox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-white" cx="23" cy="23" r="22.5" />
+                <path class="path-white" d="M22.8305 14H23.5085V34H22.8305V14Z" />
+                <path class="path-white" d="M13 24.1695V23.4915H33V24.1695H13Z" />
+              </svg>
+            </button>  
+          </li>
+          <li class="faq__item accordion">
+            <button class="accordion__control btn-reset">
+              Какая комната самая популярная?
+              <svg width="46" height="46" viewbox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-purple" cx="23" cy="23" r="22.5" />
+                <path class="path-purple" d="M22.8305 14H23.5085V34H22.8305V14Z" />
+                <path class="path-purple" d="M13 24.1695V23.4915H33V24.1695H13Z" />
+              </svg>
+            </button>
+          </li>
+          <li class="faq__item accordion">
+            <button class="accordion__control btn-reset accordion__control_bg_purple">
+              Как получить VIP карту?
+              <svg width="46" height="46" viewbox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-white" cx="23" cy="23" r="22.5" />
+                <path class="path-white" d="M22.8305 14H23.5085V34H22.8305V14Z" />
+                <path class="path-white" d="M13 24.1695V23.4915H33V24.1695H13Z" />
+              </svg>
+            </button>  
+          </li>
+          <li class="faq__item accordion">
+            <button class="accordion__control btn-reset">
+              Какая комната самая популярная?
+              <svg width="46" height="46" viewbox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-purple" cx="23" cy="23" r="22.5" />
+                <path class="path-purple" d="M22.8305 14H23.5085V34H22.8305V14Z" />
+                <path class="path-purple" d="M13 24.1695V23.4915H33V24.1695H13Z" />
+              </svg>
+            </button>
+          </li>
         </ul>
       </div>
     </section>
