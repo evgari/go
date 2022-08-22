@@ -21,7 +21,7 @@
     box-shadow 0.3s ease-out;
 }
 
-.card_center {
+.card_transition_y {
   transform: translateY(25%);
 }
 
@@ -45,7 +45,7 @@
   box-shadow: 0 0 4px 2px rgba(221, 221, 221, 0.7);
 }
 
-.card_center:hover {
+.card_transition_y:hover {
   transform: scale(1.1) translateY(25%);
 }
 
