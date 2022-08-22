@@ -1,3 +1,8 @@
+.entertainment {
+  --cart-count: 3; 
+  --gap: 30px;
+}
+
 .entertainment__title {
   margin-bottom: 40px;
 }
@@ -5,14 +10,19 @@
 .entertainment__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px 20px;
+  gap: var(--gap);
+  justify-content: space-between;
 }
 
 .card {
   position: relative;
-  flex-basis: 380px;
+  flex-basis: calc(100% / var(--cart-count) - (var(--gap) * (var(--cart-count) - 1)) / var(--cart-count));
   transition: transform 0.3s ease-in-out,
     box-shadow 0.3s ease-out;
+}
+
+.card_center {
+  transform: translateY(25%);
 }
 
 .card__image {
@@ -31,8 +41,11 @@
 }
 
 .card:hover {
-  z-index: 5;
   transform: scale(1.1);
   box-shadow: 0 0 4px 2px rgba(221, 221, 221, 0.7);
+}
+
+.card_center:hover {
+  transform: scale(1.1) translateY(25%);
 }
 
