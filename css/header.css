@@ -19,32 +19,31 @@
   font-weight: 400px;
   line-height: 50px;
   text-transform: uppercase;
+  outline: none;
   transition: color 0.3s ease-in-out;
 }
 
 @media (min-width: 1025px) {
   .nav__link:hover {
-    color: #6c0287;
+    color: var(--color-purple);
   }
 }
 
-.nav__link.focus-visible {
-  outline: 2px solid #cd06ff;
-  border-radius: 10px;
-  outline-offset: 5px;
+.nav__link:focus-visible {
+  color: var(--color-purple);
 }
 
 .nav__link:active {
-  color: #cd06ff;
+  color: var(--color-dark-purple);
 }
 
 .header__btn {
-  border: 3px solid #cd06ff;
+  border: 3px solid var(--color-violet);
   border-radius: 10px;
   padding: 12px 48px;
   font-size: 22px;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-white);
   outline: none;
   transition: background-color 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
@@ -52,12 +51,17 @@
 
 @media (min-width: 1025px) {
   .header__btn:hover {
-    border-color: #6c0287;
-    background-color: #6c0287;
+    border-color: var(--color-purple);
+    background-color: var(--color-purple);
   }
 }
 
-.header__btn.focus-visible {
-  border-color: #6c0287;
-  background-color: #6c0287;
+.header__btn:focus-visible {
+  border-color: var(--color-purple);
+  background-color: var(--color-purple);
+}
+
+.header__btn:active {
+  border-color: var(--color-dark-purple);
+  background-color: var(--color-dark-purple);
 }

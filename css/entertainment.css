@@ -8,20 +8,18 @@
   gap: 40px 20px;
 }
 
-.entertainment__item {
+.card {
   position: relative;
   flex-basis: 380px;
+  transition: transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-out;
 }
 
-.entertainment__card {
-  position: relative;
-}
-
-.entertainment__item-imgage {
+.card__image {
   display: block;
 }
 
-.entertainment__item-caption {
+.card__caption {
   position: absolute;
   left: 40px;
   bottom: 6px;
@@ -31,3 +29,10 @@
   font-weight: 700;
   line-height: 28px;
 }
+
+.card:hover {
+  z-index: 5;
+  transform: scale(1.1);
+  box-shadow: 0 0 4px 2px rgba(221, 221, 221, 0.7);
+}
+

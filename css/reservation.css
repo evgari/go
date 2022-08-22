@@ -1,5 +1,5 @@
 .reservation {
-  background-color: #440f51;
+  background-color: var(--color-jagger);
 }
 
 .reservation__title {
@@ -43,8 +43,8 @@
   padding: 11px 58px;
   font-size: 30px;
   font-weight: 700;
-  color: #000;
-  background-color: #fff;
+  color: var(--color-black);
+  background-color: var(--color-white);
   cursor: pointer;
   outline: none;
   transition: background-color 0.3s ease-in-out,
@@ -52,25 +52,25 @@
 }
 
 .hall-input:checked + .hall-btn {
-  color: #fff;
-  background-color: #000;
+  color: var(--color-white);
+  background-color: var(--color-violet);
 }
 
 @media (min-width: 1025px) {
   .hall-btn:hover {
-    border-color: #640aa3;
-    background-color: #eadeed;
+    border-color: var(--color-dark-purple);
+    background-color: var(--color-snuff);
   }
 }
 
-.hall-input.focus-visible + .hall-btn {
-  border-color: #640aa3;
+.hall-input:focus-visible + .hall-btn {
+  border-color: var(--color-dark-purple);
 }
 
 .hall-btn:active {
-  color: #fff;
-  background-color: #6c0287;
-  border-color: #fff;
+  color: var(--color-white);
+  background-color: var(--color-purple);
+  border-color: var(--color-white);
 }
 
 .reservation-form__inner {
@@ -119,10 +119,11 @@
   margin-right: 12px;
   width: 27px;
   height: 27px;
+  outline: none;
 }
 
-.console__input.focus-visible {
-  outline: 1px solid #cd06ff;
+.console__input:focus-visible {
+  outline: 1px solid var(--color-violet);
 }
 
 .game__checkbox {
@@ -131,8 +132,8 @@
   height: 25px;
 }
 
-.game__checkbox.focus-visible {
-  outline: 1px solid #cd06ff;
+.game__checkbox:focus-visible {
+  outline: 1px solid var(--color-violet);
 }
 
 .reservation-form__date {
@@ -147,8 +148,8 @@
   height: 52px;
 }
 
-.date-input.focus-visible {
-  outline: 2px solid #cd06ff;
+.date-input:focus-visible {
+  outline: 2px solid var(--color-violet);
 }
 
 .personal-input {
@@ -157,8 +158,8 @@
   height: 52px;
 }
 
-.personal-input.focus-visible {
-  outline: 2px solid #cd06ff;
+.personal-input:focus-visible {
+  outline: 2px solid var(--color-violet);
 }
 
 .personal-input::placeholder {
@@ -175,8 +176,8 @@
   padding: 15px 62px;
   font-size: 22px;
   font-weight: 700;
-  color: #6c0287;
-  background-color: #fff;
+  color: var(--color-purple);
+  background-color: var(--color-white);
   outline: none;
   transition: background-color 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
@@ -184,18 +185,18 @@
 
 @media (min-width: 1025px) {
   .reservation-form__btn:hover {
-    border-color: #6c0287;
-    background-color: #eadeed;
+    border-color: var(--color-purple);
+    background-color: var(--color-snuff);
   }
 }
 
-.reservation-form__btn.focus-visible {
-  border-color: #6c0287;
+.reservation-form__btn:focus-visible {
+  border-color: var(--color-purple);
 }
 
 .reservation-form__btn:active {
   border-color: transparent;
-  background-color: #eadeed;
+  background-color: var(--color-snuff);
 }
 
 

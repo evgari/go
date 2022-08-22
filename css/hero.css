@@ -46,7 +46,7 @@
 }
 
 .benefits__item-benefit {
-  color: #cd06ff;
+  color: var(--color-violet);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -71,7 +71,7 @@
   font-size: 26px;
   font-weight: 700;
   color: #fff;
-  background-color: #6c0287;
+  background-color: var(--color-purple);
   text-transform: uppercase;
   outline: none;
   transition: background-color 0.3s ease-in-out;
@@ -83,12 +83,12 @@
   }
 }
 
-.hero__btn.focus-visible {
+.hero__btn:focus-visible {
   background-color: #840aa3;
 }
 
 .hero__btn:active {
-  background-color: #640aa3;
+  background-color: var(--color-dark-purple);
 }
 
 .hero__down-btn {
@@ -96,13 +96,18 @@
   z-index: 50;
   left: 50%;
   bottom: 90px;
-  color: #fff;
+  border: 1px solid transparent;
+  display: flex;
+  color: var(--color-white);
   transform: translateX(-50%);
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .hero__down-btn circle {
   fill: transparent;
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out,
+    stroke 0.3s ease-in-out;
 }
 
 .hero__down-btn rect {
@@ -111,24 +116,25 @@
 
 @media (min-width: 1025px) {
   .hero__down-btn:hover circle {
-    fill: #fff;
+    fill: var(--color-white);
   }
 
   .hero__down-btn:hover rect {
-    fill: #6c0287;
+    fill: var(--color-dark-purple);
   }
 }
 
-.hero__down-btn.focus-visible {
-  outline: 1px solid #cd06ff;
+.hero__down-btn:focus-visible {
+  border-color: var(--color-violet);
 }
 
 .hero__down-btn:active circle {
-  fill: #cd06ff;
+  fill: var(--color-violet);
+  stroke: var(--color-violet);
 }
 
 .hero__down-btn:active rect {
-  fill: #fff;
+  fill: var(--color-white);
 }
 
 
