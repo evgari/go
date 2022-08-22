@@ -15,8 +15,14 @@
 }
 
 .card {
-  position: relative;
   flex-basis: calc(100% / var(--cart-count) - (var(--gap) * (var(--cart-count) - 1)) / var(--cart-count));
+  display: flex;
+  align-items: flex-end;
+  padding: 6px 40px;
+  height: 228px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: transform 0.3s ease-in-out,
     box-shadow 0.3s ease-out;
 }
@@ -25,16 +31,9 @@
   transform: translateY(25%);
 }
 
-.card__image {
-  display: block;
-}
-
 .card__caption {
-  position: absolute;
-  left: 40px;
-  bottom: 6px;
   max-width: 280px;
-  height: 56px;
+  min-height: 56px;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
