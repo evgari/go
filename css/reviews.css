@@ -2,6 +2,12 @@
   margin-bottom: 50px;
 }
 
+.reviews__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .reviews__item {
   display: flex;
 }
@@ -38,6 +44,132 @@
 }
 
 .reviews__item-text {
-  padding-top: 40px;
+  padding-top: 48px;
   max-width: 680px;
+}
+
+@media (max-width: 1024px) {
+  .reviews__title {
+    margin-bottom: 26px;
+  }
+
+  .reviews__item {
+    max-width: 705px;
+  }
+
+  .reviews__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .reviews__image {
+    margin-right: 39px;
+    min-width: 172px;
+  }
+  
+  .reviews__image::after {
+    height: calc(100% - 47px);
+  }
+
+  .reviews__image-avatar {
+    margin-bottom: 21px;
+    width: 172px;
+    height: 172px;
+  }
+
+  .reviews__image-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .reviews__item-text {
+    padding-top: 33px;
+    max-width: none;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews__title {
+    margin-bottom: 30px;
+  }
+
+  .reviews__item {
+    max-width: 561px;
+  }
+
+  .reviews__item:not(:last-child) {
+    margin-bottom: 29px;
+  }
+
+  .reviews__image {
+    margin-right: 14px;
+    min-width: 153px;
+  }
+  
+  .reviews__image::after {
+    height: calc(100% - 38px);
+  }
+
+  .reviews__image-avatar {
+    margin-bottom: 18px;
+    width: 153px;
+    height: 153px;
+  }
+
+  .reviews__image-name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .reviews__item-text {
+    padding-top: 33px;
+    max-width: none;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews__title {
+    margin-bottom: 12px;
+  }
+
+  .reviews__item {
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+  }
+
+  .reviews__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .reviews__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    min-width: auto;
+  }
+
+  .reviews__image::after {
+    left: 50%;
+    max-width: 86px;
+    height: calc(100% - 27px);
+    transform: translateX(-50%);
+  }
+
+  .reviews__image-avatar {
+    margin-bottom: 9px;
+    max-width: 86px;
+    height: 86px;
+  }
+
+  .reviews__item-text {
+    padding-top: 16px;
+    max-width: none;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
