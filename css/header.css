@@ -91,6 +91,69 @@
   background-color: var(--color-dark-purple);
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal__wrapper {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 150px;
+  padding: 20px;
+  padding-top: 60px;
+  width: 600px;
+  height: 500px;
+  background-color: var(--color-jagger);
+  transform: translateX(-50%);
+}
+
+.modal__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: block;
+  width: 42px;
+  height: 42px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/close.svg");
+}
+
+.modal__title {
+  margin-bottom: 40px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.call-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.call-form .personal {
+  width: 280px;
+}
+
+.modal.modal_open {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 1200px) {
   .logo__img {
     max-width: 87px;

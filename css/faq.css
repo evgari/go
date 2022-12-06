@@ -27,72 +27,87 @@
   background-color: var(--color-jagger);
 }
 
-.circle-purple {
-  fill: transparent;
-  stroke: var(--color-jagger);
-  transition: fill 0.3s ease-in-out,
-    stroke 0.3s ease-in-out;
-}
-
-.path-purple {
-  fill: var(--color-jagger);
-  transition: fill 0.3s ease-in-out;
-}
-
-.circle-white {
+.circle {
   fill: transparent;
   stroke: var(--color-white);
   transition: fill 0.3s ease-in-out,
     stroke 0.3s ease-in-out;
 }
 
-.path-white {
+.line {
   fill: var(--color-white);
   transition: fill 0.3s ease-in-out;
 }
 
-@media (min-width: 1025px) {
-  .accordion__control:hover .circle-purple {
-    fill: var(--color-jagger);
-    stroke: var(--color-jagger);
-  }
+.circle_purple {
+  fill: transparent;
+  stroke: var(--color-jagger);
+}
 
-  .accordion__control:hover .path-purple {
-    fill: var(--color-white);
-  }
+.line_purple {
+  fill: var(--color-jagger);
+}
+
+.accordion__wrapper {
+  height: 0;
+  background-color: var(--color-white);
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+}
+
+.accordion__text {
+  padding: 50px 73px;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--color-black);
 }
 
 @media (min-width: 1025px) {
-  .accordion__control:hover .circle-white {
+  .accordion__control:hover .circle {
     fill: var(--color-white);
     stroke: var(--color-white);
   }
 
-  .accordion__control:hover .path-white {
+  .accordion__control:hover .line {
     fill: var(--color-jagger);
   }
+}
+
+@media (min-width: 1025px) {
+  .accordion__control:hover .circle_purple {
+    fill: var(--color-jagger);
+    stroke: var(--color-jagger);
+  }
+
+  .accordion__control:hover .line_purple {
+    fill: var(--color-white);
+  }
+}
+
+.accordion_active .line:first-of-type {
+  fill: rgba(0, 0, 0, 0);
 }
 
 .accordion__control:focus-visible {
   border-color: var(--color-violet);
 }
 
-.accordion__control:active .circle-purple {
-  fill: transparent;
-  stroke: var(--color-jagger);
-}
-
-.accordion__control:active .path-purple {
-  fill: var(--color-jagger);
-}
-
-.accordion__control:active .circle-white {
+.accordion__control:active .circle {
   fill: transparent;
   stroke: var(--color-white);
 }
 
-.accordion__control:active .path-white {
+.accordion__control:active .line {
   fill: var(--color-white);
+}
+
+.accordion__control:active .circle_purple {
+  fill: transparent;
+  stroke: var(--color-jagger);
+}
+
+.accordion__control:active .line_purple {
+  fill: var(--color-jagger);
 }
 
 @media (max-width: 1024px) {
@@ -112,21 +127,24 @@
     background-color: var(--color-white);
   }
 
-  .circle-white {
-    fill: transparent;
+  .accordion__text {
+    padding: 20px 22px;
+    font-size: 18px;
+  }
+
+  .circle {
     stroke: var(--color-jagger);
   }
   
-  .path-white {
+  .line {
     fill: var(--color-jagger);
   }
 
-  .accordion__control:active .circle-white {
-    fill: transparent;
+  .accordion__control:active .circle {
     stroke: var(--color-jagger);
   }
   
-  .accordion__control:active .path-white {
+  .accordion__control:active .line {
     fill: var(--color-jagger);
   }
 
@@ -145,6 +163,10 @@
     min-height: 70px;
     font-size: 18px;
   }
+
+  .accordion__text {
+    padding: 30px 56px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -152,6 +174,11 @@
     padding: 0 10px;
     font-size: 16px;
     text-align: left;
+  }
+
+  .accordion__text {
+    padding: 20px 10px;
+    font-size: 16px;
   }
 }
 
@@ -177,6 +204,10 @@
   .accordion__control svg {
     max-width: 30px;
     height: 30px;
+  }
+
+  .accordion__text {
+    font-size: 12px;
   }
 }
 
