@@ -1,12 +1,14 @@
 .header {
+  position: relative;
+  z-index: 200;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .burger-btn {
@@ -32,7 +34,7 @@
   color: #840aa3;
 }
 
-.burger-btn__icon,
+.burger-icon,
 .logo__img {
   display: block;
 }
@@ -94,26 +96,29 @@
 .modal {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: 400;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  cursor: pointer;
 }
 
 .modal__wrapper {
   position: absolute;
-  z-index: 2;
+  z-index: 150;
   left: 50%;
   top: 150px;
-  padding: 20px;
+  padding: 30px;
   padding-top: 60px;
   width: 600px;
   height: 500px;
   background-color: var(--color-jagger);
   transform: translateX(-50%);
+  cursor: default;
 }
 
 .modal__close {
@@ -123,10 +128,22 @@
   display: block;
   width: 42px;
   height: 42px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../img/close.svg");
+  color: var(--color-white);
+  transition: color 0.4s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .modal__close:hover {
+    color: var(--color-violet);
+  }
+}
+
+.modal__close:focus-visible {
+  outline: 2px solid var(--color-violet);
+}
+
+.modal__close:active {
+  color: var(--color-dark-purple);
 }
 
 .modal__title {
@@ -149,9 +166,18 @@
   width: 280px;
 }
 
+.modal__btn {
+  padding: 14px 49px;
+  font-size: 22px;
+}
+
 .modal.modal_open {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
+}
+
+.header__btn_mobile {
+  display: none;
 }
 
 @media (max-width: 1200px) {
@@ -201,14 +227,80 @@
     display: block;
   }
 
-  .nav {
+  .close-icon {
     display: none;
+    width: 54px;
+    height: 39px;
+  }
+
+  .close-icon_modal {
+    display: block;
+  }
+
+  .burger-btn_active {
+    padding: 0;
+  }
+
+  .burger-btn_active .close-icon {
+    display: block;
+  }
+
+  .burger-btn_active .burger-icon {
+    display: none;
+  }
+
+  .nav {
+    position: absolute;
+    inset: 117px 0 0 0;
+    z-index: 200;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    justify-content: flex-start;
+    background-color: rgba(27, 26, 27, 0.7);
+    opacity: 0;
+    overflow-y: auto;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: none;
+    width: 100%;
+    height: 400px;
+    background-color: var(--color-dark);
+  }
+
+  .nav__link {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .modal__wrapper {
+    top: 20px;
+    width: 500px;
   }
 }
 
 @media (max-width: 600px) {
+  .nav__list {
+    gap: 30px;
+  }
+
   .header__btn {
     display: none;
+  }
+
+  .header__btn_mobile {
+    display: block;
+    justify-self: flex-start;
+  }
+
+  .modal__wrapper {
+    width: 90%;
   }
 }
 
@@ -218,14 +310,55 @@
     padding-bottom: 16px;
   }
 
-  .burger-btn__icon {
+  .burger-icon {
     width: 39px;
     height: 20px;
+  }
+
+  .close-icon {
+    width: 39px;
+    height: 30px;
   }
 
   .logo__img {
     max-width: 66px;
     height: 42px;
+  }
+
+  .call-form .personal {
+    width: 220px;
+  }
+
+  .modal__btn {
+    padding: 13px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .modal__close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .nav {
+    inset: 83px 0 0 0;
+  }
+
+  .nav__list {
+    gap: 25px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .header__btn {
+    font-size: 14px;
+    line-height: 14px;
   }
 }
 

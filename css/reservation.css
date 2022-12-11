@@ -179,31 +179,8 @@
 }
 
 .reservation-form__btn {
-  border: 3px solid transparent;
   padding: 15px 47px;
   font-size: 22px;
-  color: var(--color-purple);
-  background-color: var(--color-white);
-  box-shadow: 0 0 20px 0 var(--color-white);
-  transition: background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-@media (min-width: 1025px) {
-  .reservation-form__btn:hover {
-    border-color: var(--color-purple);
-    background-color: var(--color-snuff);
-  }
-}
-
-.reservation-form__btn:focus-visible {
-  border-color: var(--color-purple);
-}
-
-.reservation-form__btn:active {
-  border-color: transparent;
-  background-color: var(--color-snuff);
-  box-shadow: none;
 }
 
 @media (max-width: 1024px) {

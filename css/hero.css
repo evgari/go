@@ -9,7 +9,7 @@
   position: absolute;
   z-index: 10;
   bottom: 57px;
-  right: calc((100% - 1300px) / 2 + 3%);
+  right: calc((100% - 1300px) / 2 + 5%);
   display: block;
   width: 675px;
   height: 762px;

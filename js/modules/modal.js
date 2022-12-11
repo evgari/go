@@ -1,15 +1,17 @@
-const modalBtn = document.querySelector('.call-btn');
+const modalBtns = document.querySelectorAll('.call-btn');
 const overlay = document.querySelector('.modal');
 
-modalBtn.addEventListener('click', () => {
-  overlay.classList.add('modal_open');
+modalBtns.forEach(el => {
+  el.addEventListener('click', () => {
+    overlay.classList.add('modal_open');
+  });
 });
 
 overlay.addEventListener('click', e => {
   const target = e.target;
 
   if (target === overlay ||
-    target.classList.contains('modal__close')) {
+    target.closest('.modal__close')) {
       overlay.classList.remove('modal_open');
   }
 });

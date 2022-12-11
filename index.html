@@ -18,10 +18,14 @@
   <header class="header">
     <div class="container header__container">
       <button class="burger-btn btn-reset">
-        <svg class="burger-btn__icon" width="54" height="29" viewbox="0 0 54 29" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+        <svg class="burger-icon" width="54" height="29" viewbox="0 0 54 29" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
           <rect width="54" height="5" rx="2" />
           <rect y="12" width="54" height="5" rx="2" />
           <rect y="24" width="31" height="5" rx="2" />
+        </svg>
+        <svg class="close-icon close-icon_burger" width="42" height="42" viewbox="0 0 42 42" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <rect y="38.1838" width="54" height="5" rx="2" transform="rotate(-45 0 38.1838)" />
+          <rect x="3.53564" width="54" height="5" rx="2" transform="rotate(45 3.53564 0)" />
         </svg>
       </button>
 
@@ -45,6 +49,9 @@
           </li>
           <li class="nav__item">
             <a class="nav__link js-scroll-to" href="#contacts">контакты</a>
+          </li>
+          <li class="nav__item">
+            <button class="btn-reset header__btn header__btn_mobile btn call-btn" type="button">Заказать звонок</button>
           </li>
         </ul>
       </nav>
@@ -231,7 +238,7 @@
             </label>
           </fieldset>
           <div class="reservation-form__btns reservation-form-padding">
-            <button class="reservation-form__btn btn-reset btn">Забронировать</button>
+            <button class="reservation-form__btn btn-reset btn btn_diamond">Забронировать</button>
           </div>
         </form>
       </div>
@@ -475,7 +482,12 @@
 
   <div class="modal">
     <div class="modal__wrapper">
-      <button class="btn-reset modal__close" type="button"></button>
+      <button class="btn-reset modal__close" type="button">
+        <svg class="close-icon close-icon_modal" width="42" height="42" viewbox="0 0 42 42" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <rect y="38.1838" width="54" height="5" rx="2" transform="rotate(-45 0 38.1838)" />
+          <rect x="3.53564" width="54" height="5" rx="2" transform="rotate(45 3.53564 0)" />
+        </svg>
+      </button>
       <h3 class="modal__title">Заказать звонок</h3>
       <form class="call-form">
         <label class="personal">
@@ -486,7 +498,7 @@
           Телефон
           <input class="personal-input modal__phone" type="tel" name="modal-phone">
         </label>
-        <button class="btn-reset btn reservation-form__btn modal-btn">Позвонить мне</button>
+        <button class="btn-reset btn btn_diamond modal__btn">Позвонить мне</button>
       </form>
     </div>
   </div>

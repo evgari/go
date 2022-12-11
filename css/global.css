@@ -99,6 +99,32 @@ blockquote {
   outline: none;
 }
 
+.btn_diamond {
+  border: 3px solid transparent;
+  color: var(--color-purple);
+  background-color: var(--color-white);
+  box-shadow: 0 0 20px 0 var(--color-white);
+  transition: background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .btn_diamond:hover {
+    border-color: var(--color-purple);
+    background-color: var(--color-snuff);
+  }
+}
+
+.btn_diamond:focus-visible {
+  border-color: var(--color-purple);
+}
+
+.btn_diamond:active {
+  border-color: transparent;
+  background-color: var(--color-snuff);
+  box-shadow: none;
+}
+
 @media (max-width: 1024px) {
   .section-padding {
     padding-top: 35px;
