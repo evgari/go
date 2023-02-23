@@ -1,19 +1,10 @@
 .reviews__title {
-  margin-bottom: 50px;
-}
-
-.reviews__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 47px;
 }
 
 .reviews__item {
   display: flex;
-}
-
-.reviews__item:not(:last-child) {
-  margin-bottom: 50px;
+  padding: 0 100px;
 }
 
 .reviews__image {
@@ -44,21 +35,22 @@
 }
 
 .reviews__item-text {
-  padding-top: 48px;
+  padding-top: 51px;
   max-width: 680px;
+}
+
+.reviews__slider-btn {
+  top: 44%;
+}
+
+.reviews__slider-btn::after {
+  font-size: 62px;
+  color: var(--color-purple);
 }
 
 @media (max-width: 1024px) {
   .reviews__title {
     margin-bottom: 26px;
-  }
-
-  .reviews__item {
-    max-width: 705px;
-  }
-
-  .reviews__item:not(:last-child) {
-    margin-bottom: 40px;
   }
 
   .reviews__image {
@@ -87,19 +79,19 @@
     font-size: 18px;
     line-height: 26px;
   }
+
+  .reviews__slider-btn {
+    top: 39%;
+  }
+
+  .reviews__slider-btn::after {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 768px) {
   .reviews__title {
     margin-bottom: 30px;
-  }
-
-  .reviews__item {
-    max-width: 561px;
-  }
-
-  .reviews__item:not(:last-child) {
-    margin-bottom: 29px;
   }
 
   .reviews__image {
@@ -122,27 +114,38 @@
     line-height: 20px;
   }
 
+  .reviews__item {
+    padding: 0 64px;
+  }
+
   .reviews__item-text {
     padding-top: 33px;
     max-width: none;
     font-size: 16px;
     line-height: 22px;
   }
+
+  .reviews__slider-btn {
+    top: 54%;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews__item {
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    padding: 0;
+  }
+
+  .reviews__slider-btn {
+    top: 40%;
+  }
 }
 
 @media (max-width: 480px) {
   .reviews__title {
     margin-bottom: 12px;
-  }
-
-  .reviews__item {
-    flex-direction: column;
-    align-items: center;
-    max-width: none;
-  }
-
-  .reviews__item:not(:last-child) {
-    margin-bottom: 30px;
   }
 
   .reviews__image {
@@ -171,5 +174,13 @@
     max-width: none;
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .reviews__slider-btn {
+    top: 14%;
+  }
+
+  .reviews__slider-btn::after {
+    font-size: 30px;
   }
 }
